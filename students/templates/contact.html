@@ -1,0 +1,37 @@
+
+{% extends 'base.html' %}
+{% block title %}
+    Contact
+{% endblock title %}
+
+{% block body %}
+
+    <div class="container-fluid" style="background-color: grey">
+        <div style="margin-left: 300px">
+            <h1 style="color:orangered">Contact Us</h1>
+            <img src="/static/sch2.jpg" alt="School img" style="width: 60%">
+        </div>  
+    </div>
+     <div class="container-fluid" style="background-color: aqua; padding: 40px">
+        <div style="background-color: lightseagreen">
+        <form method="post" action="/contact" style="padding:10px; margin-left: 300px">
+    {% csrf_token %}
+                <label for="name">Enter your name: </label><br>
+                <input type="text" id="name" name="name" placeholder="Your full name"><br>
+                <label for="email">Enter your email: </label><br>
+                <input type="email" id="email" name="email" placeholder="yourname@gmail.com"><br>
+                <label for="Class">Class: </label><br>
+                <input type="text" id="Class" name="Class" placeholder="your class"><br>
+                <div class="form-group">
+                    <label for="desc">Please Write the reason for contacting us:</label><br>
+                    <textarea class="form-control" id="desc" rows="4" name="desc"></textarea>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn-primary">Submit</button>
+                </div>
+            </form>
+            </div>
+        </div>
+{% endblock body %}
+
+

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Subjects:
+{% endblock title %}
+
+{% block body %}
+<div class="container" style="background-color: aqua">
+    <div style="padding:100px; margin-left: 150px">
+        
+        <h3>English</h3>
+        <img src="/static/eng.jpg" style="width:60%"><br>
+        <div style="margin-left: 190px; padding:20px">
+            <button><a href="/physicsassignments">Assignment</a></button>
+        </div>
+        <h3>Mathematics</h3>
+        <img src="/static/math.jpg" style="width:60%"><br>
+        <div style="margin-left: 190px; padding:20px">
+            <button><a href="/mathassignments">Assignment</a></button>
+        </div>
+        <h3>Physics</h3>
+        <img src="/static/physics.jpg" style="width: 60%"><br>
+        <div style="margin-left: 190px; padding:20px">
+            <button><a href="/physicsassignments">Assignment</a></button>
+        </div>
+    </div>
+</div>
+{% endblock body %}
